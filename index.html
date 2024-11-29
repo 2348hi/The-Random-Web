@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Something Cool</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: -0.025em;
+        }
+        button {
+            padding: 1rem 2rem;
+            background-color: white;
+            color: black;
+            border: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        button:hover {
+            background-color: #e5e5e5;
+            transform: scale(1.05);
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3.75rem;
+            }
+            button {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Discover Something Cool</h1>
+    <button id="coolButton">Take Me Somewhere Cool</button>
+
+    <script>
+        const websites = [
+            'https://www.onemillionpats.com',
+            'http://onemillionlols.com',
+            'https://zoomquilt.org',
+            'https://radiooooo.com',
+            'https://stellarium-web.org',
+            'http://chillestmonkey.com',
+            'https://neal.fun/eyechat',
+            'https://neal.fun/earth-reviews',
+            'https://meow.camera',
+            'https://www.whatbeatsrock.com',
+            'https://www.ravbug.com/hypertranslate',
+            'https://www.whichfaceisreal.com',
+            'https://oasis.decart.ai',
+            'https://character.ai',
+            'https://thefreemovie.buzz',
+            'https://justtypestuff.com',
+            'https://cursordanceparty.com',
+            'https://exp-abduction.lusion.co',
+            'https://playphrase.me',
+            'https://en.akinator.com',
+            'https://chess-captcha.performave.com',
+            'https://codepen.io/Paredes0/pen/ZERdajG',
+            'https://www.wifimap.io',
+            'https://haveibeenpwned.com',
+            'https://www.pixelsfighting.com',
+            'https://slowroads.io',
+        ];
+
+        function getRandomWebsite() {
+            const randomIndex = Math.floor(Math.random() * websites.length);
+            return websites[randomIndex];
+        }
+
+        const button = document.getElementById('coolButton');
+        button.addEventListener('click', () => {
+            window.open(getRandomWebsite(), '_blank');
+        });
+        button.addEventListener('mouseenter', () => {
+            button.textContent = "LET'S GO!";
+        });
+        button.addEventListener('mouseleave', () => {
+            button.textContent = "TAKE ME SOMEWHERE COOL";
+        });
+    </script>
+</body>
+</html>
+
